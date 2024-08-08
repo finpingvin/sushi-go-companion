@@ -1,0 +1,105 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#app {
+  isolation: isolate;
+}
+
+/*
+  Application styling
+*/
+
+:root {
+  --salmon-color: #e34519;
+  --tuna-color: #efe8dc;
+  --wasabi-color: #b6ca15;
+  --nori-color: #24360a;
+  --egg-color: #feac18;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100dvh;
+}
+
+body {
+  background-color: #000;
+}
+
+#app {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start__root {
+  background-color: var(--salmon-color);
+  padding: 12px;
+}
+
+#start__players {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.start__player-input {
+  background-color: var(--nori-color);
+  border: 1px solid var(--tuna-color);
+  border-radius: 4px;
+  padding: 2px;
+}
+.start__player-input::placeholder {
+  color: var(--tuna-color);
+}
+
+#start__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+#rounds__root {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.rounds__player-cards {
+  background-color: var(--salmon-color);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.rounds__add-card-choice {
+  display: flex;
+  gap: 8px;
+}
